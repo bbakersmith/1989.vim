@@ -1,59 +1,29 @@
 " Vim color file
+"
 
+set background=light
 highlight clear
 
-if exists("syntax_on")
-  syntax reset
-endif
+let g:colors_name = "1989light"
 
-let g:colors_name = "1989"
+let s:dark_gray = [254, "#FFFFFF"]
+let s:mid_gray = [102, "#878787"]
+let s:default_white = [236, "#303030"]
 
-if &background == "light"
+let s:lavender = [91, "#dfafff"]
+let s:light_purple = [225, "#ffdfff"]
+let s:gray_purple = [97, "#afafd7"]
 
-  let s:dark_gray = [253, "#FFFFFF"]
-  let s:mid_gray = [102, "#878787"]
-  let s:default_white = [236, "#303030"]
+let s:pink = [161, "#ff005f"]
+let s:light_blue = [31, "#0087af"]
+let s:mint = [35, "#00875f"]
+let s:light_yellow = [229, "#ffffaf"]
 
-  let s:lavender = [91, "#dfafff"]
-  let s:light_purple = [170, "#ffdfff"]
-  let s:gray_purple = [97, "#afafd7"]
+let s:dark_pink = [218, "#ffafdf"]
+let s:dark_green = [158, "#afffd7"]
+let s:dark_blue = [31, "#0087af"]
 
-  " 161 is maybe more accurate to dark theme?
-  let s:pink = [162, "#ff005f"]
-  let s:light_blue = [31, "#0087af"]
-  let s:mint = [35, "#00875f"]
-  let s:light_yellow = [229, "#ffffaf"]
-
-  let s:dark_pink = [218, "#ffafdf"]
-  let s:dark_green = [158, "#afffd7"]
-  let s:dark_blue = [31, "#0087af"]
-
-  let s:none = ["NONE", ""]
-
-else
-
-  set background=dark
-
-  let s:dark_gray = [236, "#303030"]
-  let s:mid_gray = [102, "#878787"]
-  let s:default_white = [231, "#FFFFFF"]
-
-  let s:lavender = [183, "#dfafff"]
-  let s:light_purple = [225, "#ffdfff"]
-  let s:gray_purple = [146, "#afafd7"]
-
-  let s:pink = [218, "#ffafdf"]
-  let s:light_blue = [159, "#afffff"]
-  let s:mint = [158, "#afffd7"]
-  let s:light_yellow = [229, "#ffffaf"]
-
-  let s:dark_pink = [197, "#ff005f"]
-  let s:dark_green = [29, "#00875f"]
-  let s:dark_blue = [31, "#0087af"]
-
-  let s:none = ["NONE", ""]
-
-endif
+let s:none = ["NONE", ""]
 
 function! <SID>set_hi(name, fg, bg, style)
   execute "hi " . a:name . " ctermfg=" . a:fg[0] . " ctermbg=" . a:bg[0] " cterm=" . a:style
